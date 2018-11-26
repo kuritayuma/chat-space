@@ -13,7 +13,7 @@
 - belongs_to :group
 - belongs_to :user
 
-## messageテーブル
+## messagesテーブル
 
 |Column|Type|Options|
 |------|----|-------|
@@ -22,11 +22,11 @@
 |group_id|integer|null: false, foreign_key: true|
 |user_id|integer|null: false, foreign_key: true|
 
-###Association
+### Association
 - belongs_to :user
 - belongs_to :group
 
-## userテーブル
+## usersテーブル
 
 |Column|Type|Options|
 |------|----|-------|
@@ -37,7 +37,7 @@
 - has_many :messages
 - has_many :groups, through: :members
 
-## groupテーブル
+## groupsテーブル
 
 |Column|Type|Options|
 |------|----|-------|
