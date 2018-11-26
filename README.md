@@ -1,6 +1,6 @@
 # README
 
-#DB設計
+# DB設計
 
 ## membersテーブル
 
@@ -33,7 +33,7 @@
 |name|string|null: false, index: true|
 |email|string|null: false|
 
-###Association
+### Association
 - has_many :messages
 - has_many :groups, through: :members
 
@@ -43,5 +43,5 @@
 |------|----|-------|
 |group_name|string|null: false, index: true|
 
-###Association
+### Association
 - has_many :users, through: :members
