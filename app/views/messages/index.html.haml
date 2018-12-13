@@ -1,0 +1,50 @@
+!!!
+%html{lang: "ja"}
+  %head
+    %meta{charset: "utf-8"}
+  %body
+  .header
+    #information
+      チャットグループが作成されました。
+  .content
+    .header-left
+      .name-box
+        kuri
+      .edit-box
+        = link_to '', id: 'cog-icon' do
+          =fa_icon "cog"
+        = link_to '', id: 'edit-icon' do
+          =fa_icon "edit"
+    .header-right
+      %h2#header-right-group
+        sampleグループ
+      .edit-button
+        #edit-text
+          Edit
+    .contents-left
+      #group-name
+        test
+      #message
+        まだメッセージはありません。
+    .contents-right
+      #message-user
+        kuri
+        #time-stamp
+          2018/12/02 20:00
+        #comment
+          腹へった
+      #message-user
+        yuma
+        #time-stamp
+          2018/12/03/ 09:00
+        #comment
+          外は寒い。
+      .contents-bottom
+        .text-form
+          #input-message
+            type a message
+          = link_to '', id: 'image-icon' do
+            =fa_icon "image"
+        .send-button
+          #send-text
+            Send
