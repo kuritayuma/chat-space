@@ -1,0 +1,162 @@
+$sax-blue: #38AEF0;
+
+.header{
+  background-color: $sax-blue;
+  height: 30px;
+    .information{
+      color: white;
+      text-align: center;
+    }
+}
+.content{
+  width: 100vw;
+}
+
+.header-left{
+  background-color: #253141;
+  height: 90px;
+  width: 300px;
+  float: left;
+}
+
+.name-box{
+  width: 130px;
+  font-size: 16px;
+  color: white;
+  line-height: 90px;
+  padding-left: 20px;
+  font-weight: bold;
+  float: left;
+}
+
+
+.edit-box{
+  height: 90px;
+  width: 130px;
+  float: right;
+  .cog-icon{
+    color: white;
+    float: right;
+    padding-right: 20px;
+    padding-top: 34px;
+  }
+  .edit-icon{
+    color: white;
+    float: right;
+    padding-right: 5px;
+    padding-top: 34px;
+  }
+}
+
+.contents-left{
+  height: 100vh;
+  width: 300px;
+  background-color: #2f3e51;
+  float: left;
+  clear: both;
+  .group-name{
+    color: #FFFFFF;
+    font-size: 15px;
+    padding-left: 20px;
+    padding-top: 20px;
+  }
+  .message{
+    color: #FFFFFF;
+    font-size: 11px;
+    padding-left: 20px;
+    padding-top: 5px;
+  }
+}
+
+.header-right{
+  height: 90px;
+  width: calc(100vw - 300px);
+  float: right;
+  position: relative;
+  .header-right-group{
+    color: #333333;
+    font-size: 20px;
+    padding: 35px 0 15px 10px;
+  }
+  .edit-button{
+    height: 40px;
+    width: 80px;
+    position: absolute;
+    top: 28px;
+    right: 40px;
+    border: 1px solid $sax-blue;
+  }
+  .edit-text{
+    color: #38AEF0;
+    text-align: center;
+    line-height: 40px;
+  }
+}
+
+.contents-right{
+  height: 100vh;
+  width: calc(100vw - 300px);
+  background-color: #AAAAAA;
+  float: right;
+  border-top: 1px #eeeeee solid;
+  .message-user{
+    font-size: 16px;
+    color: #434A54;
+    padding-top: 46px;
+    padding-left: 40px;
+    font-weight: bold;
+  }
+}
+
+.time-stamp{
+  color: #999999;
+  font-size: 12px;
+  display: inline-block;
+  padding-left: 10px;
+}
+
+.comment{
+  color: #434A54;
+  font-size: 14px;
+  padding-top: 10px;
+}
+
+.contents-bottom{
+  height: 90px;
+  background-color: silver;
+  width: calc(100vw - 300px);
+  position: fixed;
+  bottom: 0;
+  .text-form{
+    height: 50px;
+    width: calc(100% - 155px);
+    background-color: white;
+    position: absolute;
+    bottom: 20px;
+    .input-message{
+      color: #434A54;
+      font-size: 16px;
+      padding-left: 50px;
+      line-height: 50px;
+    }
+  }
+
+  .image-icon{
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+  }
+  .send-button{
+      background-color: $sax-blue;
+      height: 50px;
+      width: 100px;
+      float: right;
+      margin-top: 20px;
+      margin-right: 40px;
+      .send-text{
+        color: white;
+        text-align: center;
+        line-height: 50px;
+      }
+    }
+}
