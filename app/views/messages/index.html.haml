@@ -8,8 +8,8 @@
     .edit-box
       = link_to '', class: 'cog-icon' do
         =fa_icon "cog"
-      = link_to '', class: 'edit-icon' do
-        =fa_icon "edit"
+      = link_to edit_user_path(current_user) do
+        =fa_icon "edit", class: 'edit-icon'
   .header-right
     %h2.header-right-group
       sampleグループ
