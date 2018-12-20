@@ -4,7 +4,7 @@
 .content
   .header-left
     .name-box
-      kuri
+      = current_user.name
     .edit-box
       = link_to '', class: 'cog-icon' do
         =fa_icon "cog"
