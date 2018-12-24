@@ -34,13 +34,7 @@ $sax-blue: #38AEF0;
   height: 90px;
   width: 130px;
   float: right;
-  .cog-icon{
-    color: white;
-    float: right;
-    padding-right: 20px;
-    padding-top: 34px;
-  }
-  .edit-icon{
+  .icon{
     color: white;
     float: right;
     padding-right: 5px;
@@ -54,17 +48,21 @@ $sax-blue: #38AEF0;
   background-color: #2f3e51;
   float: left;
   clear: both;
-  .group-name{
-    color: #FFFFFF;
-    font-size: 15px;
-    padding-left: 20px;
-    padding-top: 20px;
-  }
-  .message{
-    color: #FFFFFF;
-    font-size: 11px;
-    padding-left: 20px;
-    padding-top: 5px;
+  .group{
+    height: 100vh;
+    width: 300px;
+    .group-name{
+      color: #FFFFFF;
+      font-size: 15px;
+      padding-left: 20px;
+      padding-top: 20px;
+    }
+    .message{
+      color: #FFFFFF;
+      font-size: 11px;
+      padding-left: 20px;
+      padding-top: 5px;
+    }
   }
 }
 
