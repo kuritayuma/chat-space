@@ -1,0 +1,15 @@
+.content
+  .header-right
+    %h2.header-right-group
+      sampleグループ
+    .edit-button
+      .edit-text
+        Edit
+    .messages
+      = render @messages
+    = form_for [@group, @message], html: {class: 'contents-bottom'} do |f|
+      = f.text_field :content, class: 'text-form',placeholder: 'type a message'
+      = f.label :image, class: 'image-icon' do
+        = fa_icon 'picture-o'
+        = f.file_field :image, class: 'hidden'
+      = f.submit 'Send', class: 'form__submit'

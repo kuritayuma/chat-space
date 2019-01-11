@@ -1,13 +1,5 @@
 $sax-blue: #38AEF0;
 
-.header{
-  background-color: $sax-blue;
-  height: 30px;
-    .information{
-      color: white;
-      text-align: center;
-    }
-}
 .content{
   width: 100vw;
 }
@@ -74,7 +66,7 @@ $sax-blue: #38AEF0;
   .header-right-group{
     color: #333333;
     font-size: 20px;
-    padding: 35px 0 15px 10px;
+    padding: 35px 0 25px 10px;
   }
   .edit-button{
     height: 40px;
@@ -141,10 +133,10 @@ $sax-blue: #38AEF0;
 
   .image-icon{
     position: absolute;
-    right: 10px;
-    bottom: 10px;
+    right: 170px;
+    bottom: 40px;
   }
-  .send-button{
+  .form__submit{
       background-color: $sax-blue;
       height: 50px;
       width: 100px;
@@ -157,4 +149,8 @@ $sax-blue: #38AEF0;
         line-height: 50px;
       }
     }
+}
+
+.hidden {
+  display: none;
 }
