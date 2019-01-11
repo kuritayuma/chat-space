@@ -1,22 +1,24 @@
-.header
-  .information
-    チャットグループが作成されました。
-.content
-  .header-right
-    %h2.header-right-group
-      sampleグループ
-    .edit-button
-      .edit-text
-        Edit
-    .messages
-      = render @messages
-    .contents-bottom
-      .text-form
-       = form_for [@group, @message] do |f|
-        = f.text_field :content, class: 'form__message', placeholder: 'type a message'
-            .input-message
-              = f.label :image, class: 'form__mask__image' do
-                = fa_icon 'picture-o', class: 'image-icon' do
-                = f.file_field :image, class: 'hidden'
-        = f.submit 'Send', class: 'form__submit'
+/ .content
+/   .header-right
+/     %h2.header-right-group
+/       sampleグループ
+/     .edit-button
+/       .edit-text
+/         Edit
+/     .messages
+/       = render @messages
+/     .contents-bottom
+/       .text-form
+/        = form_for [@group, @message] do |f|
+/         = f.text_field :content, class: 'form__message', placeholder: 'type a message'
+/             .input-message
+/               = f.label :image, class: 'form__mask__image' do
+/                 = fa_icon 'picture-o', class: 'image-icon' do
+/                 = f.file_field :image, class: 'hidden'
+/         = f.submit 'Send', class: 'form__submit'
+
+.chat
+  = render 'shared/side_bar'
+
+  = render 'shared/chat'
 
