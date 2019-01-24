@@ -1,10 +1,9 @@
-.contents-right
-  .comment
-    .message-user
-      = message.user.name
-    .time-stamp
-      = message.created_at.strftime("%Y/%m %H:%M")
-    - if message.content.present?
-      %p.lower-message__content
-        = message.content
-    = image tag message.image.url, class: 'lower-message__image' if message.image.present?
+.comment
+  .message-user
+    = message.user.name
+  .time-stamp
+    = message.created_at.strftime("%Y/%m %H:%M")
+  - if message.content.present?
+    %p.lower-message__content
+      = message.content
+  = image tag message.image.url, class: 'lower-message__image' if message.image.present?
