@@ -25,10 +25,10 @@ $(function() {
   }
 
   $(document).on("click", ".chat-group-user__btn--add", function(){
-    var userId = $(this).attr("data-user-id")
-    var userName = $(this).attr("data-user-name")
+    var user_id = $(this).attr("data-user-id")
+    var user_name = $(this).attr("data-user-name")
 
-    appendGroupUser(userId, userName);
+    appendGroupUser(user_id, user_name);
     $(this).parent().remove();
 
   })
