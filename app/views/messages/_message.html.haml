@@ -1,8 +1,8 @@
-.comment
+.comment{ "data-id": message.id}
   .message-user
     = message.user.name
   .time-stamp
-    = message.created_at.strftime("%Y/%m %H:%M")
+    = message.created_at.strftime('%Y年%-m月%-d日 %H時%M分')
   - if message.content.present?
     %p.lower-message__content
       = message.content

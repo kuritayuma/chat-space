@@ -4,7 +4,7 @@ $(function(){
     if (message.image.url) {
       image = `<img src="${message.image.url}" class="lower-message__image">`;
     }
-    var html = `<div class="comment">
+    var html = `<div class="comment" data-id="${message.id}">
                   <div class="message-user">
                   ${message.user_name}
                   </div>
@@ -18,6 +18,7 @@ $(function(){
                 </div>`
     return html;
   }
+  // メッセージ送信
   $('#new_message').on('submit', function(e){
     e.preventDefault();
     var formData = new FormData(this);
@@ -43,4 +44,33 @@ $(function(){
       $('.form__submit').prop('disabled', false)
     }, 1000);
   });
+
+  // 自動更新
+  var path = location.pathname
+  var group_id = $('.header-right-group').data('id');
+  if (path == `/groups/${group_id}/messages`) {
+    setInterval(function(){
+      var message_id = $('.comment:last').data('id');
+        $.ajax({
+          url: path,
+          type: 'GET',
+          data: {
+            id: message_id
+          },
+          dataType: 'json'
+        })
+
+        .done(function(data){
+          data.forEach(function(message){
+            var html = buildHTML(message)
+            $('.contents-right').append(html);
+            $('.contents-right').animate({scrollTop: $('.contents-right')[0].scrollHeight}, 'fast');
+          });
+        })
+
+        .fail(function(){
+          alert('error');
+        });
+    }, 5000);
+  }
 });
